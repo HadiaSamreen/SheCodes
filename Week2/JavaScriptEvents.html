@@ -1,0 +1,67 @@
+<!--
+    After the user clicks on the Apply now button
+Ask for the person’s first name
+Ask for the person’s age
+If 18 or more, change the h1 to  “Hi, {Name}! Welcome to SheCodes !”
+Otherwise change the h1 to  “Sorry, {Name}! You cannot join SheCodes ”
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <style>
+              button {
+        border: 1px solid #885df1;
+        border-radius: 30px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        display: block;
+        color: #885df1;
+        font-size: 16px;
+        background: transparent;
+        padding: 15px 20px;
+        transition: all 200ms ease;
+      }
+
+      button:hover {
+        color: #fff;
+        background: #885df1;
+      }
+          </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;  font-size: 30px; color:rgb(21, 24, 36); margin-top: 150px;  font-weight:800;   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  ">
+            👩‍💻She Codes is a Coding Workshop For Women</h1>
+        <p style="text-align:center; color:blueviolet; font-weight:800;   font-size: 30px;   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  margin-top:3px;">
+          Access a new career in Technology</p>
+        <p style="text-align:center; margin-top:70px; font-weight: 100; font-size:15px; font-family:'Courier New', Courier, monospace; ">
+          She codes teaches Coding,Style and management skills to Women</p>
+        <h5 style="text-align:center;  font-family:'Courier New', Courier, monospace;">
+          Limited amount of spots
+        </h5>
+        <button>
+            Apply now
+        </button>
+
+        <script>
+        function apply() {
+            let firstName = prompt("What is your first name?");
+            let age = prompt("How old are you?");
+            let heading = document.querySelector("h1");
+            if (age >= 18) {
+                heading.innerHTML = "Hi " + firstName + "! Welcome to SheCodes 👩‍💻";
+            } else {
+                heading.innerHTML =
+                "Sorry " + firstName + ", you can't apply to SheCodes.";
+            }
+            }
+           let applyButton = document.querySelector("button");
+            applyButton.addEventListener("click", apply);
+        </script>
+    </body>
+</html>
+
+
+
